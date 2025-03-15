@@ -220,6 +220,7 @@ function generateStoryPage(story) {
 
     <script src="../js/main.js"></script>
     <script src="../js/audio.js"></script>
+    <script src="../js/minigames.js"></script>
 </body>
 </html>`;
 }

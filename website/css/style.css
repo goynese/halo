@@ -295,6 +295,95 @@ nav li.active a::after {
   box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
 }
 
+/* Mini-Games Styles */
+.minigame-container {
+  background-color: rgba(18, 24, 36, 0.7);
+  border: 1px solid rgba(0, 204, 255, 0.3);
+  border-radius: 5px;
+  padding: 2rem;
+  margin: 3rem 0;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.minigame-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--primary-color) 20%, var(--primary-color) 80%, transparent 100%);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.minigame-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--primary-color) 20%, var(--primary-color) 80%, transparent 100%);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.minigame-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+  font-family: var(--title-font);
+  letter-spacing: 2px;
+}
+
+#game-canvas {
+  background-color: rgba(10, 14, 20, 0.8);
+  border: 1px solid rgba(0, 204, 255, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.game-controls {
+  background-color: rgba(10, 14, 20, 0.5);
+  border-left: 3px solid var(--primary-color);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-family: var(--body-font);
+}
+
+.game-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(0, 204, 255, 0.1);
+  color: var(--primary-color);
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 204, 255, 0.3);
+  font-family: var(--title-font);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.game-button:hover {
+  background-color: rgba(0, 204, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+}
+
+.no-game {
+  color: var(--text-color);
+  font-style: italic;
+  margin: 2rem 0;
+}
+
 /* Story Grid */
 .story-grid {
   display: grid;
@@ -387,6 +476,46 @@ nav li.active a::after {
   margin-bottom: 1rem;
   font-family: var(--title-font);
   letter-spacing: 2px;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  padding-bottom: 10px;
+  margin: 20px 0;
+  border: 1px solid rgba(0, 204, 255, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.2);
+}
+
+.video-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--primary-color) 20%, var(--primary-color) 80%, transparent 100%);
+  box-shadow: 0 0 8px var(--primary-color);
+  z-index: 1;
+}
+
+.video-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, var(--primary-color) 20%, var(--primary-color) 80%, transparent 100%);
+  box-shadow: 0 0 8px var(--primary-color);
+  z-index: 1;
+}
+
+.video-container iframe {
+  display: block;
+  background-color: rgba(10, 14, 20, 0.5);
 }
 
 /* About Page Styles */
@@ -496,6 +625,18 @@ footer {
   nav a::after {
     display: none;
   }
+  
+  .video-container {
+    padding-bottom: 0;
+  }
+  
+  .video-container iframe {
+    height: 300px;
+  }
+  
+  #game-canvas {
+    height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -513,5 +654,17 @@ footer {
   
   .welcome-title, .story-title {
     font-size: 2rem;
+  }
+  
+  .video-container iframe {
+    height: 240px;
+  }
+  
+  #game-canvas {
+    height: 200px;
+  }
+  
+  .minigame-title {
+    font-size: 1.5rem;
   }
 } 
