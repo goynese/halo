@@ -170,6 +170,7 @@ function generateStoryPage(story) {
                     <li${story.id === 8 ? ' class="active"' : ''}><a href="story8.html">Captain Keyes</a></li>
                     <li${story.id === 9 ? ' class="active"' : ''}><a href="story9.html">Sergeant Johnson</a></li>
                     <li${story.id === 10 ? ' class="active"' : ''}><a href="story10.html">Marine's Story</a></li>
+                    <li><a href="../about.html">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -200,6 +201,7 @@ function generateStoryPage(story) {
     </div>
 
     <script src="../js/main.js"></script>
+    <script src="../js/audio.js"></script>
 </body>
 </html>`;
 }
