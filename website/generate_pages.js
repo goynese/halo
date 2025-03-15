@@ -142,6 +142,25 @@ function generateStoryPage(story) {
     // Convert the story content to HTML paragraphs
     const paragraphs = storyContent.split('\n\n').map(p => `<p>${p}</p>`).join('\n                 ');
 
+    // Generate the navigation links
+    let navigationHtml = '<div class="story-navigation">';
+    
+    if (story.prev) {
+        navigationHtml += `<a href="${story.prev.link}" class="nav-button">${story.prev.title}</a>`;
+    } else {
+        navigationHtml += `<span></span>`;
+    }
+    
+    navigationHtml += `<a href="../index.html" class="nav-button">Home</a>`;
+    
+    if (story.next) {
+        navigationHtml += `<a href="${story.next.link}" class="nav-button">${story.next.title}</a>`;
+    } else {
+        navigationHtml += `<span></span>`;
+    }
+    
+    navigationHtml += '</div>';
+
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -175,6 +194,8 @@ function generateStoryPage(story) {
             </nav>
         </header>
 
+        <div class="horizontal-line"></div>
+
         <main>
             <section class="story-content">
                 <h2 class="story-title">${story.title}</h2>
@@ -188,10 +209,7 @@ function generateStoryPage(story) {
                 
                 ${paragraphs}
                 
-                <div class="story-navigation">
-                    <a href="${story.prev.link}" class="nav-button">${story.prev.title}</a>
-                    <a href="${story.next.link}" class="nav-button">${story.next.title}</a>
-                </div>
+                ${navigationHtml}
             </section>
         </main>
 
