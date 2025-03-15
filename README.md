@@ -13,6 +13,7 @@ A collection of short stories set in the Halo: Combat Evolved universe. These st
 7. **Digital Sentinel** - Cortana's unique perspective as an AI
 8. **The Captain's Last Stand** - Captain Jacob Keyes' leadership during the crisis
 9. **The Sergeant's Speech** - Sergeant Johnson rallying his Marines
+10. **Just Another Day in Hell** - A regular UNSC Marine's perspective on the front lines
 
 These stories capture the excitement, tension, and wonder of the original Halo: Combat Evolved game, exploring the rich universe from multiple perspectives.
 
