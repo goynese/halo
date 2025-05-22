@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   color: var(--secondary-color);
   text-transform: uppercase;
+  text-align: center; /* Center all h1, h2, etc. */
 }
 
 p {
@@ -667,4 +668,71 @@ footer {
   .minigame-title {
     font-size: 1.5rem;
   }
-} 
+}
+
+/* Styles for Master Chief Chat page */
+#masterchief-avatar {
+    display: block;
+    margin: 20px auto;
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    border-radius: 50%; /* Optional: makes it circular */
+    object-fit: cover;
+}
+
+#chat-output {
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    overflow-y: auto; /* Makes it scrollable if content exceeds height */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for the chat log */
+    color: #333; /* Darker text for chat readability */
+}
+
+#chat-output .user-message {
+    text-align: right;
+    margin-bottom: 5px;
+    color: #007bff; /* Blue for user messages */
+}
+
+#chat-output .chief-message {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold; /* Differentiate Chief's messages */
+    color: #28a745; /* Green for Chief's messages */
+}
+
+#chat-input-area {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+#user-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--body-font);
+}
+
+#send-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: var(--primary-color); /* Use theme color */
+    color: var(--dark-bg); /* Dark text on light button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: var(--secondary-color);
+}
